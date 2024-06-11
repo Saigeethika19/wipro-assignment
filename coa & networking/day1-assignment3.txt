@@ -1,0 +1,17 @@
+Assignment 3: Real-World Applications of Parallel Computing and Networked Systems
+------------------------------------------------------------------------------------------------------------------
+Parallel Computing
+________________________
+Application: Weather Forecasting
+
+	Usage: Parallel computing is used to process large-scale simulations of weather models. These simulations require complex 		calculations involving vast amounts of data collected from various sources (e.g., satellites, weather stations).
+	Importance: Speed and accuracy are crucial in weather forecasting. Parallel computing allows meteorologists to run multiple 	simulations concurrently, improving the reliability and timeliness of weather predictions.
+______________________________
+Networked Systems
+______________________________
+Application: Online Banking
+
+Usage: Networked systems connect bank servers, ATMs, mobile banking apps, and online banking platforms. This integration allows real-time transactions, balance checks, fund transfers, and other banking services.
+
+Importance: Ensures seamless and secure financial operations across different platforms and locations. Networked systems facilitate constant connectivity, ensuring that users have uninterrupted access to banking services regardless of their location.
+These technologies are essential because they enhance computational efficiency (parallel computing) and connectivity (networked systems), leading to better performance, reliability, and user experience in various applications.

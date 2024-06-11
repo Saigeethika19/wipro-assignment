@@ -1,0 +1,24 @@
+Assignment 2: Home Network Topology and Accessing the RPS Lab Environment
+
+Home Network Topology
+
+                      Internet
+                          |
+                        Modem
+                          |
+                        Router
+                     /    |    \
+           Laptop  Desktop  Smartphone
+
+1.Modem: Connects to the ISP (Internet Service Provider) and provides internet access.
+2.Router: Distributes the internet connection to various devices within the home network.
+3.Devices: Examples include a laptop, desktop, and smartphone connected to the router either via Wi-Fi or Ethernet.
+_________________________________
+Accessing the RPS Lab Environment
+_________________________________
+1.VPN: Connect to the corporate VPN to securely access the internal network.
+2.Remote Desktop: Use Remote Desktop Protocol (RDP) or similar software to connect to a workstation in the RPS lab.
+3.Authentication: Use credentials provided by the organization to authenticate and gain access to the lab environment.
+4.Network Path:
+Home Device → Router → Modem → ISP → VPN Gateway → RPS Lab Network → RPS Lab Environment
+

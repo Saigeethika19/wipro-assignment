@@ -1,0 +1,41 @@
+Assignment 1: Network Terminologies with Examples
+
+1.IP Address :-
+        Definition: A unique address that identifies a device on the internet or a local network.
+        Example: 192.168.1.1 (IPv4), 2001:0db8:85a3:0000:0000:8a2e:0370:7334 (IPv6)
+
+2.Subnet Mask:-
+        Definition: A 32-bit number that masks an IP address and divides the IP address into network and host parts.
+        Example: 255.255.255.0
+
+3.Default Gateway :-
+        Definition: A router that serves as an access point to pass information to and from the internet.
+        Example: 192.168.1.254
+
+4. DNS (Domain Name System) :-
+        Definition: The phonebook of the internet that translates human-friendly domain names to IP addresses.
+        Example: Resolving www.google.com to 142.250.182.68
+
+5. MAC Address :-
+        Definition: A hardware identification number that uniquely identifies each device on a network.
+
+6. Router :-
+        Definition: A device that forwards data packets between computer networks.
+        Example: A home Wi-Fi router
+
+7. Switch :-
+        Definition: A networking device that connects devices together on a computer network by using packet switching to   forward data to the destination device.
+        Example: An Ethernet switch used in a local area network (LAN)
+
+8. Firewall :-
+        Definition: A network security device that monitors and filters incoming and outgoing network traffic based on predetermined security rules.
+        Example: Software firewalls like Windows Defender or hardware firewalls like Cisco ASA
+
+9. VPN (Virtual Private Network) :-
+        Definition: A service that encrypts your internet connection and hides your IP address to provide secure and private internet access.
+        Example: Using NordVPN to access a remote network securely
+
+10.Bandwidth :-
+        Definition: The maximum rate of data transfer across a given path.
+        Example: A home internet connection with 100 Mbps download speed
+
