@@ -1,0 +1,96 @@
+create table books
+(
+books_id number(10) primary key,
+title varchar2(40) not null,
+status varchar2(40),
+author_id number(10),
+foreign key (author_id) references author (author_id) on delete set null
+);
+
+create table author
+(
+author_id number(10) primary key,
+name varchar2(30) not null
+);
+
+create table members
+(
+member_id number(10) primary key,
+name varchar2(30) not null,
+email varchar2(40) unique not null,
+phone_no number(10) unique
+);
+
+create table loans
+(
+loan_id number(10) primary key,
+book_id number(10),
+member_id number(10),
+loan_date date not null,
+return_date date,
+check(return_date >= loan_date),
+foreign key(book_id) references books(books_id) on delete cascade,
+foreign key(member_id) references members on delete cascade
+);
+
+create table categories
+(
+category_id number(10) primary key,
+book_id number(10),
+category varchar2(30) unique not null,
+foreign key(book_id) references books(books_id) on delete cascade
+);
+
+insert into books values(111,'Harry Potter and the Soccer's Stone','Available',1);
+insert into books values(121,'Atomic Habits','Not Available',2);
+insert into books values(112,'The girl on the train','Available',3);
+insert into books values(122,'Dont waste your life','Available',4);
+insert into books values(113,'To kill a Mockingbird','Not Available',5);
+
+insert into author values(1,'Bloomsbury');
+insert into author values(2,'James Clear');
+insert into author values(3,'Paula Hawkins');
+insert into author values(4,'John Piper');
+insert into author values(5,'Harper Lee');
+
+insert into categories values(101,111,'Fiction');
+insert into categories values(102,112,'Crime Thriller');
+insert into categories values(103,113,'Classic');
+insert into categories values(104,121,'Motivation');
+insert into categories values(105,123,'Education');
+
+insert into members values(1001,'Geethika','geethika@gmail.com',9010671209);
+insert into members values(1002,'Ravi','ravi@gmail.com',null);
+insert into members values(1003,'Sangit','sangit@gmail.com',7264905027);
+insert into members values(1004,'Raushan','raushan@gmail.com',null);
+
+
+insert into loans values(1011,112,1001,to_date('2024-06-06','yyyy-mm-dd'),null);
+insert into loans values(1012,113,1002,to_date('2024-05-02','yyyy-mm-dd'),to_date('2024-05-15','yyyy-mm-dd'));
+insert into loans values(1013,111,1004,to_date('2024-04-09','yyyy-mm-dd'),to_date('2024-04-21','yyyy-mm-dd'));
+insert into loans values(1014,121,1003,to_date('2024-05-10','yyyy-mm-dd'),null);
+insert into loans values(1015,122,1001,to_date('2024-03-05','yyyy-mm-dd'),to_date('2024-03-25','yyyy-mm-dd'));
+insert into loans values(1016,112,1002,to_date('2024-02-23','yyyy-mm-dd'),null);
+insert into loans values(1017,113,1003,to_date('2024-01-26','yyyy-mm-dd'),to_date('2024-02-23','yyyy-mm-dd'));
+insert into loans values(1018,122,1004,to_date('2024-03-16','yyyy-mm-dd'),null);
+
+desc books;
+desc author;
+desc categories;
+desc members;
+desc loans;
+
+select * from books;
+
+select * from author;
+
+select * from categories;
+
+select * from members;
+
+select * from loans;
+
+select * from books 
+inner join
+categories
+on books.books_id=categories.book_id;

@@ -1,0 +1,20 @@
+create table customers
+{
+cust_id number(10) primary key,
+name varchar2(40) not null,
+phone_no number(20)not null,
+email varchar2(20)unique,
+city varchar2(30)
+};
+
+insert into customers values(101,'Geethika',9010671209,'geethika@gmail.com','Guntur');
+insert into customers values(102,'Ravi',7343537862,'ravi@gmail.com','billal');
+insert into customers values(103,'Sangit',7264905027,'sangit@gmail.com','Mumbai');
+insert into customers values(104,'Mansi',7322537862,'mansi@gmail.com','Lucknow');
+insert into customers values(105,'Raushan',8903537862,'raushan@gmail.com','Pune');
+insert into customers values(106,'Shalu',9392959966,'shalu@gmail.com','Vijayawada');
+
+select * from customers;
+
+select name,email from customers
+where city='Lucknow';

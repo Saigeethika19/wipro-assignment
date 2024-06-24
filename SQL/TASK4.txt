@@ -1,0 +1,53 @@
+ASSIGNMENT 4:
+-------------
+Craft a query using an INNER JOIN to combine 'orders' and 'customers' tables for customers in a specified region, and a LEFT JOIN to display all customers including those without orders.
+
+
+create table customers
+(
+cust_id number(10) primary key,
+name varchar2(40) not null,
+phone_no number(20)not null,
+email varchar2(20)unique,
+city varchar2(30)
+);
+
+insert into customers values(101,'Geethika',9010671209,'geethika@gmail.com','Guntur');
+insert into customers values(102,'Ravi',7343537862,'ravi@gmail.com','Lucknow');
+insert into customers values(103,'Sangit',97264905027,'sangit@gmail.com','Mumbai');
+insert into customers values(104,'Mansi',7322537862,'mansi@gmail.com','Lucknow');
+insert into customers values(105,'Raushan',8903537862,''raushan@gmail.com','Pune');
+insert into customers values(106,'Shalu',9392959966,'shalu@gmail.com','Vijayawada');
+
+select * from customers;
+
+create table orders
+(
+order_id number(10) primary key,
+order_name varchar2(40) not null,
+cust_id number(10),
+foreign key(cust_id) references customers(cust_id)
+);
+
+insert into orders values(1001, 'Laptop', 101);
+insert into orders values(1002, 'Phone', 102);
+insert into orders values(1003, 'Charger', 102);
+insert into orders values(1004, 'Chocolate', 103);
+insert into orders values(1005, 'Coffee', 104);
+insert into orders values(1006, 'Books', 105);
+insert into orders values(1001, 'Phone', 103);
+insert into orders values(1001, 'Laptop', 106);
+insert into orders values(1001, 'Pens', 101);
+insert into orders values(1001, 'Bottles', 104);
+
+select * from customers
+inner join
+orders
+on customer.cust_id=orders.cust_id
+where customer.city='Lucknow';
+
+select * from customers
+left join
+orders
+on customer.cust_id=orders.cust_id
+where customer.city='Lucknow';
